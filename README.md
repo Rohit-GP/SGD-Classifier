@@ -39,6 +39,12 @@ print(df.head())
 x=df.drop('target',axis=1)
 y=df['target']
 
+# iris = load_iris()
+# Create DataFrame and separate features and target
+# df = pd.DataFrame(iris.data, columns=iris.feature_names)
+# x = df
+# y = iris.target
+
 x_train,x_test,y_train,y_test =train_test_split(x,y,test_size=0.2 ,random_state=42)
 
 sgd_clf=SGDClassifier(max_iter=1000,tol=1e-3)
